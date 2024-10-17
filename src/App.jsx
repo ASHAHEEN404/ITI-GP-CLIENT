@@ -15,7 +15,7 @@ import CourseCatalog from "./features/courses/pages/CourseCatalog";
 import CourseDetail from "./features/courses/pages/CourseDetail";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import LessonDetails from "./features/courses/pages/LessonDetails";
+import LessonDetails from "./features/courses/pages/LessonDetails
 import MainLayout from "./layouts/Mainlayout";
 import DashboardLayout from "./layout/DashboardLayout";
 import AdminPage from "./features/dashboard/pages/admin/AdminPage";
