@@ -114,7 +114,7 @@ function App() {
                   ) : role === "student" ? (
                     <Navigate to="/dashboard/student" />
                   ) : role === "parent" ? (
-                    <Navigate to="/dashboard/parent" />
+                    <Navigate to="/dashboard/parent/:parentId" />
                   ) : (
                     <Navigate to="/dashboard/profile" />
                   )}
@@ -135,7 +135,7 @@ function App() {
               />
               {/* Teacher routes */}
               <Route
-                path="teacher"
+                path="teacher/"
                 element={
                   <ProtectedRoute role={role} allowedRoles={["teacher"]}>
                     <TeacherPage />
@@ -152,7 +152,10 @@ function App() {
                 }
               />
               {/* Parent routes */}
-              <Route path="parent" element={<ParentPage />} />
+              <Route
+                path="/dashboard/parent/:parentId"
+                element={<ParentPage />}
+              />
               {/* Common routes accessible by all roles */}
               <Route path="profile" element={<ProfileList />} />
               <Route path="list/teachers" element={<TeachersList />} />
