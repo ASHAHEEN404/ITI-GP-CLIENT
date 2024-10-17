@@ -16,7 +16,7 @@ import CourseDetail from "./features/courses/pages/CourseDetail";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import LessonDetails from "./features/courses/pages/LessonDetails";
-import MainLayout from "./layouts/mainlayout";
+import MainLayout from "./layouts/Mainlayout";
 import DashboardLayout from "./layout/DashboardLayout";
 import AdminPage from "./features/dashboard/pages/admin/AdminPage";
 import TeacherPage from "./features/dashboard/pages/teacher/TeacherPage";
@@ -64,14 +64,14 @@ function App() {
   };
   return (
     <>
-     
+
       <SignUpContext.Provider value={{ type, handleTypeChange }}>
         <Router>
           <Routes>
             {/* Main layout routes */}
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route path="contact" element={<Contact />} /> 
+              <Route path="contact" element={<Contact />} />
               <Route path="about-us" element={<About />} />
               <Route path="/wallet" element={<Wallet />} />
               <Route path="/wallet/checkout" element={<Checkout />} />
