@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://e-learning-system-iti-production.up.railway.app';
+const API_URL = 'http://localhost:3000';
 
 export const resetPasswordApi = async (data) => {
 
@@ -11,7 +11,7 @@ export const resetPasswordApi = async (data) => {
         'Content-Type': 'application/json',
       },
     });
-    return response.data.message; 
+    return response.data.message;
   } catch (error) {
     if (error.response) {
       console.error('Error resetting password:', error.response.data.message || error.message);

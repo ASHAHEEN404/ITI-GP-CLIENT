@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://e-learning-system-iti-production.up.railway.app/";
+const API_URL = "http://localhost:3000/";
 
 export const fetchTeachers = async () => {
   const { data } = await axios.get(`${API_URL}admin/teachers`);

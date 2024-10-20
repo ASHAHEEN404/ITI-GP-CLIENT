@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
 
-const API_URL = "https://e-learning-system-iti-production.up.railway.app/";
+const API_URL = "http://localhost:3000/";
 
 export const getCurrentUser = async () => {
   const response = await axios.get(`${API_URL}user/current`, {

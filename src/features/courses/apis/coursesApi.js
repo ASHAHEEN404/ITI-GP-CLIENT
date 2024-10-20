@@ -1,5 +1,5 @@
 import axios from "axios";
-const base_url = "https://e-learning-system-iti-production.up.railway.app";
+const base_url = "http://localhost:3000";
 
 export const getAllCourses = async (requiredPath) => {
   try {
@@ -14,7 +14,7 @@ export const getAllCourses = async (requiredPath) => {
 };
 export const getAllTeachers = async (page, limit) => {
   try {
-    const response = await axios.get(`${base_url}/user/teachers?page=${page}&limit=${limit}`);
+    const response = await axios.get(`${base_url}/user/teachers?page=${1}&limit=${limit}`);
     return response// return only the data par
   } catch (error) {
     if (error.response?.status === 404) {

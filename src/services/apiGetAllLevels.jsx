@@ -1,4 +1,4 @@
-const API_URL = 'https://e-learning-system-iti-production.up.railway.app';
+const API_URL = 'http://localhost:3000';
 
 export const apiGetAllLevels = async () => {
   try {

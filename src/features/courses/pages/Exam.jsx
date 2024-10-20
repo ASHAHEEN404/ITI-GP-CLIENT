@@ -40,7 +40,6 @@ const Exam = () => {
     queryKey: ['getSectionQuiz', quizId],
     queryFn: () => GetSectionQuiz(quizId),
     retry: false,
-    retry: false,
     onError: (err) => {
       if (err.message) {
         console.log('Error fetching quiz:', err.message);
@@ -176,7 +175,7 @@ const Exam = () => {
       questions: allQuestions,
     };
     sessionStorage.setItem("quizData", JSON.stringify(AllQuizeData));
-    setTimeout(() => {}, 500);
+    setTimeout(() => { }, 500);
   };
 
   const handleNavigate = () => {
@@ -322,27 +321,27 @@ const Exam = () => {
                   </div>
                   {currentPage >=
                     Math.ceil(allQuestions.length / questionsPerPage) - 1 && (
-                    <div className="text-center">
-                      {!allQuestionsAnswered() && (
-                        <p className="my-4 text-4xl font-bold text-red-600">
-                          برجاء الاجابة علي جميع الاسئلة
-                        </p>
-                      )}
-                      <Button
-                        variant="contained"
-                        disabled={!allQuestionsAnswered()}
-                        sx={{
-                          fontSize: "2rem",
-                          width: "100%",
-                          marginTop: "1rem",
-                          fontWeight: "bold",
-                        }}
-                        onClick={handleShowAlert}
-                      >
-                        إرسال
-                      </Button>
-                    </div>
-                  )}
+                      <div className="text-center">
+                        {!allQuestionsAnswered() && (
+                          <p className="my-4 text-4xl font-bold text-red-600">
+                            برجاء الاجابة علي جميع الاسئلة
+                          </p>
+                        )}
+                        <Button
+                          variant="contained"
+                          disabled={!allQuestionsAnswered()}
+                          sx={{
+                            fontSize: "2rem",
+                            width: "100%",
+                            marginTop: "1rem",
+                            fontWeight: "bold",
+                          }}
+                          onClick={handleShowAlert}
+                        >
+                          إرسال
+                        </Button>
+                      </div>
+                    )}
                 </motion.form>
               )}
               {isQuizEnd && (

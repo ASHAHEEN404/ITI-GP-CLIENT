@@ -1,22 +1,22 @@
 import axios from 'axios';
 
-const API_URL = "https://e-learning-system-iti-production.up.railway.app";
+const API_URL = "http://localhost:3000";
 
 export const getProfileData = async () => {
   try {
     const response = await axios.get(`${API_URL}/user/current`, {
-      withCredentials: true, 
+      withCredentials: true,
       headers: {
-        "Content-Type": "application/json", 
-      
+        "Content-Type": "application/json",
+
       },
     });
 
-    const {data} = response.data; 
-    
-    return data; 
+    const { data } = response.data;
+
+    return data;
   } catch (error) {
     console.error("Error fetching Profile data:", error);
-    throw error; 
+    throw error;
   }
 };

@@ -14,8 +14,8 @@ import person_2 from '../assets/FeaturesPage/person_2.avif';
 import person_3 from '../assets/FeaturesPage/person_3.jpg';
 import person_4 from '../assets/FeaturesPage/person_4.jpg';
 import LessonsSection from '../features/features/components/LessonsSection';
-import SubscriptionsSection from '../features/features/components/subscriptionsSection';
-import {useNavigate} from 'react-router-dom';
+import SubscriptionsSection from '../features/features/components/SubscriptionsSection';
+import { useNavigate } from 'react-router-dom';
 const featureItems = [
   {
     icon: (
@@ -113,10 +113,10 @@ const cardDescriptions = [
 
 export default function Features() {
   const navigate = useNavigate();
-const handleSignup = () => {
-  
-  navigate('/signup');
-}
+  const handleSignup = () => {
+
+    navigate('/signup');
+  }
   return (
     <>
       <motion.div
@@ -143,7 +143,7 @@ const handleSignup = () => {
               </Typography>
               <Button
                 variant="outlined"
-                color="primary" 
+                color="primary"
                 onClick={handleSignup}
                 sx={{
                   fontSize: '2rem',
